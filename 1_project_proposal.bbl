@@ -1,0 +1,30 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Rodríguez-Sánchez et~al.(2020)Rodríguez-Sánchez, Carrillo-de
+  Albornoz, and Plaza}]{sanchez-2020-automatic-classification}
+Francisco Rodríguez-Sánchez, Jorge Carrillo-de Albornoz, and Laura Plaza.
+  2020.
+\newblock \href {https://doi.org/10.1109/ACCESS.2020.3042604} {Automatic
+  classification of sexism in social networks: An empirical study on twitter
+  data}.
+\newblock \emph{IEEE Access}, 8:219563--219576.
+
+\bibitem[{Vidgen and Derczynski(2020)}]{Vidgen_2020}
+Bertie Vidgen and Leon Derczynski. 2020.
+\newblock \href {https://doi.org/10.1371/journal.pone.0243300} {Directions in
+  abusive language training data, a systematic review: Garbage in, garbage
+  out}.
+\newblock \emph{{PLOS} {ONE}}, 15(12):e0243300.
+
+\bibitem[{Vidgen et~al.(2019)Vidgen, Harris, Nguyen, Tromble, Hale, and
+  Margetts}]{vidgen-etal-2019-challenges}
+Bertie Vidgen, Alex Harris, Dong Nguyen, Rebekah Tromble, Scott Hale, and Helen
+  Margetts. 2019.
+\newblock \href {https://doi.org/10.18653/v1/W19-3509} {Challenges and
+  frontiers in abusive content detection}.
+\newblock In \emph{Proceedings of the Third Workshop on Abusive Language
+  Online}, pages 80--93, Florence, Italy. Association for Computational
+  Linguistics.
+
+\end{thebibliography}

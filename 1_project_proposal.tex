@@ -1,0 +1,89 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+
+% Remove the "review" option to generate the final version.
+\usepackage[]{ACL2023}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{graphicx}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out.
+% However, it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% This is also not strictly necessary, and may be commented out.
+% However, it will improve the aesthetics of text in
+% the typewriter font.
+\usepackage{inconsolata}
+
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{Project Proposal— Lorem Ipsum: Toward Explainable Classification of Nonsense}
+
+\author{Amet Consectetur \\
+  Universitas Ipsum\\
+  \texttt{amet.consectetur@ipsum.edu} \\\And
+  Dolor Sit \\
+  Universitas Tempor\\
+  \texttt{dolor.sit@tempor.eedu} \\}
+  
+\begin{document}
+\maketitle
+\begin{abstract}
+As part of the \href{https://codalab.lisn.upsaclay.fr/competitions/7124#learn_the_details-overview}{Task~10 of Sem-Eval~2023: Explainable Detection of Lorem Ipsum}, our project aims to provide a fine grain (11 classes) hierarchical classification of nonsensical text segments extracted from Nullam and Vivamus. We will also explore methods to improve the explainability of the classification, starting from SHAP values to explainability in a generative setting.
+\end{abstract}
+\section{Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit \cite{sanchez-2020-automatic-classification}. Nullam ut interdum elit. Proin venenatis eros nec orci varius, eget auctor libero tempor. Aenean non justo id nisi tincidunt consequat at vel enim. Ut et turpis ac lorem congue dictum. Donec blandit ligula libero, sed feugiat sem vehicula id. Quisque aliquet lorem vitae risus ultricies, nec iaculis magna volutpat. Fusce suscipit velit non ligula gravida varius. Phasellus euismod est ac mi auctor, sed bibendum augue fermentum. \newline
+Vestibulum sed mauris sem. Cras interdum mollis nisi, vel scelerisque arcu volutpat eget \cite{vidgen-etal-2019-challenges}. Etiam faucibus urna id turpis ultricies efficitur. Proin auctor sem et volutpat egestas. Nunc fringilla nisl at sagittis pellentesque. Curabitur hendrerit erat vel diam congue, ut rutrum turpis fermentum. Mauris tincidunt tincidunt ligula, at tincidunt ex sollicitudin in.
+\section{Related Work}
+Curabitur gravida est in ipsum vulputate pellentesque. Sed et nunc eget sapien ultricies ultricies at et purus. Integer dictum posuere ligula. Nam ac nibh id lectus vehicula tempor sit amet vel purus. Nunc venenatis neque eros, vel ultricies risus posuere eget. Nullam nec congue justo \cite{Vidgen_2020}. In non orci ut nisi interdum venenatis. Phasellus vel neque sed nunc tempus dapibus et eu magna. Aenean dapibus est felis, ut bibendum felis scelerisque ut.
+
+\section{Task and Daaataset}
+Mauris dapibus nisl ut gravida interdum. Aenean volutpat augue sit amet malesuada consectetur. Vivamus dictum magna ut arcu eleifend aliquet. Aenean vehicula nisi in tristique sodales (an overview of the label schema can be seen in Figure \ref{fig:subtasks-overview}):
+All annotators are self-identifying as random Latin speakers, and in case of disagreement among annotators, a majority vote is taken. As the task is already closed, our project will not officially participate in the Sem-Eval~2023 competition; however, we will use the public leaderboard as a means of comparison for our results. Vivamus tincidunt tempus nisi at congue. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.50\textwidth]{figures/nonesense.jpg}
+    \caption{Hierarchical Label Schemaee Overview}
+    \label{fig:subtasks-overview}
+\end{figure}
+\section{Methods}
+Vestibulum a velit at mi hendrerit dignissim at ut orci. Mauris nec felis a justo porttitor finibus. Integer tincidunt urna in ligula molestie, sed dapibus nulla convallis. The project will be developed within the framework proposed by the \href{https://github.com/ashleve/lightning-hydra-template}{lightning and hydra template.}
+\begin{enumerate}
+    \item Perform an initial exploration of the dataset. Suspendisse vehicula dui in diam euismod, in efficitur est dictum.
+    \item Develop a flexible pre-processing module. Integer sit amet odio et odio laoreet vehicula. 
+    \item Create a modular embedding pipeline allowing various methods such as Word2Vec, GloVe, etc.
+    \item Establish lower-bound and upper-bound baselines for each subtask. Suspendisse ac orci vel nunc fermentum aliquet.
+    \item Evaluate additional models such as Transformer-based architectures (e.g., DistilBERT).
+    \item Explore methods to enhance explainability, such as SHAP values and attention visualizations.
+    \item Provide an interactive demo with platforms like Streamlit.
+\end{enumerate}
+
+\section{Baseline and Evaluation}
+The evaluation metric will be the macro F1-score due to class imbalance. Baselines will include Gaussian Naive Bayes with TF-IDF embeddings. A higher-bound baseline will include conditional classification given parent-class labels.
+
+\bibliographystyle{acl_natbib}
+\bibliography{custom}
+% Entries for the entire Anthology, followed by custom entries
+
+\end{document}
